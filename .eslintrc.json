@@ -1,11 +1,10 @@
 {
-  "parser": "babel-eslint",
-  "extends": "airbnb",
+  "extends": ["airbnb", "plugin:prettier/recommended"],
   "env": {
     "browser": true,
     "jest": true
   },
-  "plugins": ["react", "jsx-a11y", "import"],
+  "plugins": ["react", "jsx-a11y", "import", "react-hooks"],
   "rules": {
     "semi": "off",
     "react/jsx-filename-extension": [
@@ -19,10 +18,12 @@
     "no-unused-vars": [
       "error",
       {
-        "argsIgnorePatter": "^_"
+        "argsIgnorePattern": "^_"
       }
     ],
     "consistent-return": "off",
-    "no-useless-return": "off"
+    "no-useless-return": "off",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn"
   }
 }
